@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-      rel="stylesheet"
+      <link rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./assets/style.css">
     <title>Work Day Scheduler</title>
   </head>
   <body>
@@ -23,43 +23,56 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container d-flex">
-      <div class="row row-cols-3 border">
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
-        <div class="col-8 p-4 border">Column</div>
-        <div class="col-2 p-4 border">Column</div>
+    <div class="container">
+    <div class ="table">
+      <tbody>
+        <tr class="row">
+          <th scope="row" class="time-block hour">9:00am</th>
+          <td class="col-12 description"><textarea cols="110"></textarea></td>
+          <td class="saveBtn" data-time="9">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">10:00am</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">11:00am</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">12:00pm</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">1:00pm</th>
+          <td class="col-12" ><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">2:00pm</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">3:00pm</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">4:00pm</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+        <tr class="row">
+          <th scope="row" class="time-block hour">5:00pm</th>
+          <td class="col-12"><textarea cols="110"></textarea></td>
+          <td class="saveBtn">Save</td>
+        </tr>
+      </tbody>
       </div>
-    </div>
-
-      
-      <!-- Timeblocks go here -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
