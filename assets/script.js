@@ -32,3 +32,6 @@ let appointment = document.querySelectorAll("textarea").value;
     }
     localStorage.setItem("timeSlot-" +timeSlot, dataInSlot);
 
+
+// WHEN I refresh the page
+// THEN the saved events persist
