@@ -12,17 +12,25 @@ console.log(showDay);
 // THEN I am presented with timeblocks for standard business hours
 
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+$(document).ready(function() {
+    $('.table-row').hover(function() {             
+        $(this).addClass('past');
+    }, function() {
+        $(this).removeClass('past');
+    });
+}); 
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
 
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
-let saveBtn = document.querySelectorAll("saveBtn");
-let appointment = document.querySelectorAll("textarea").value;
+let saveBtn = document.querySelector(".saveBtn");
+
+let appointment = document.querySelector("textarea").value;
 // console.log(appointment);
 // function saveEvent() {
-  saveBtn.addEventListener(("click", (event) => {
+  saveBtn.addEventListener("click", (event) => {
     // event.preventDefault();
     if (event.target.matches(".saveBtn")){
         console.log(event.target.dataset.time);
@@ -31,6 +39,10 @@ let appointment = document.querySelectorAll("textarea").value;
         var dataInSlot = event.target.parentElement.children[1].children[0].value;
     }
     localStorage.setItem("timeSlot-" +timeSlot, dataInSlot);
+  })
+
+// saveEvent();
+
 
 
 // WHEN I refresh the page
