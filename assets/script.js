@@ -11,37 +11,34 @@ console.log(showDay);
 // WHEN I scroll down
 // THEN I am presented with timeblocks for standard business hours
 
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-$(document).ready(function() {
-    $('.table-row').hover(function() {             
-        $(this).addClass('past');
-    }, function() {
-        $(this).removeClass('past');
-    });
-}); 
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
 
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
-let saveBtn = document.querySelector(".saveBtn");
+let saveBtns = document.querySelectorAll(".saveBtn");
 
 let appointment = document.querySelector("textarea").value;
 // console.log(appointment);
 // function saveEvent() {
-  saveBtn.addEventListener("click", (event) => {
-    // event.preventDefault();
-    if (event.target.matches(".saveBtn")){
-        console.log(event.target.dataset.time);
-        var timeSlot = event.target.dataset.time;
-        console.log(event.target.parentElement.children[1].children[0].value);
-        var dataInSlot = event.target.parentElement.children[1].children[0].value;
-    }
-    localStorage.setItem("timeSlot-" +timeSlot, dataInSlot);
-  })
+  saveBtns.forEach((eachSaveBtn)=>{
 
-// saveEvent();
+    eachSaveBtn.addEventListener("click", (event) => {
+
+      const parentRow = event.currentTarget.closest('tr') //get the parent tr of the button (event.currentTarget)
+      const text = parentRow.querySelector('textarea').value
+      const _timeSlot = parentRow.querySelector('.time-block').textContent.trim()
+
+      localStorage.setItem(_timeSlot, text);
+
+      alert(`Success: timeSlot: ${_timeSlot} text: ${localStorage.getItem(_timeSlot)}`)
+
+    })
+  }
+  )
+
+
 
 
 
